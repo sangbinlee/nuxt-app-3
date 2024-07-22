@@ -64,7 +64,8 @@ pipeline {
         }
         stage('run') {
             steps {
-                echo 'nuxt-app-3 run the application... by node 명령ㅇㅇㅇ important https://jenkins.sodi9.store/github-webhook/'
+                echo 'nuxt-app-3 run the application... by node 명령  important https://jenkins.sodi9.store/github-webhook/'
+                echo 'nuxt-app-3 run the application... by 백그라운드 로 실행해야함'
                 sh 'node .output/server/index.mjs'
             }
         }
