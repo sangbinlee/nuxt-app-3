@@ -64,7 +64,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                echo 'nuxt-app-3 run the application... by node 명령'
+                echo 'nuxt-app-3 run the application... by node 명령ㅇㅇㅇ'
                 sh 'node .output/server/index.mjs'
             }
         }
