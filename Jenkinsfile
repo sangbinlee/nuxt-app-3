@@ -64,7 +64,7 @@ pipeline {
         }
         stage('run') {
             steps {
-                echo 'nuxt-app-3 run the application... by node 명령ㅇㅇㅇ'
+                echo 'nuxt-app-3 run the application... by node 명령ㅇㅇㅇ important https://jenkins.sodi9.store/github-webhook/'
                 sh 'node .output/server/index.mjs'
             }
         }
