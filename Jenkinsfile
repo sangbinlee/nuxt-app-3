@@ -4,7 +4,7 @@ pipeline {
         NODE_ENV = 'production'
         BUILD_ID = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
         // JENKINS_NODE_COOKIE = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
-        PM2_HOME = '/var/lib/jenkins/.pm2'
+        // PM2_HOME = '/var/lib/jenkins/.pm2'
     }
     stages {
         stage('Clone Sources') {
