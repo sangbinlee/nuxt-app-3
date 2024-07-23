@@ -74,7 +74,8 @@ pipeline {
                 echo 'nuxt-app-3 run the application... by node .output/server/index.mjs'
                 // sh 'node .output/server/index.mjs'
                 // sh 'export BUILD_ID=dontKillMe'
-                sh 'pm2 start .output/server/index.mjs -i max --name "nuxt-app-3" -f'
+                // sh 'pm2 start .output/server/index.mjs -i max --name "nuxt-app-3" -f'// 앱이 이전 꺼도 보임 refresh할때마다 다름
+                sh ' pm2 restart "nuxt-app" || pm2 start .output/server/index.mjs -i max --name "nuxt-app-3"'
                 sh 'pm2 save'
             }
         }
