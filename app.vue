@@ -1,8 +1,18 @@
-<template>
-  <div>
-    <!-- <NuxtRouteAnnouncer />
-    <NuxtWelcome /> -->
+<script setup lang="ts">
+const foo = useFoo()
+const ver = useVer()
+</script>
 
-    nuxt test v 77777777777777    pm2 list 안되는 거 확인중...
+<template>
+  <div style="border: 1px solid red;">
+    <div>
+      [app.vue] {{ foo }}
+    </div>
+    <div>
+      [app.vue] {{ ver }}
+    </div>
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
