@@ -3,6 +3,6 @@
     <!-- <NuxtRouteAnnouncer />
     <NuxtWelcome /> -->
 
-    nuxt test
+    nuxt test v 2
   </div>
 </template>
