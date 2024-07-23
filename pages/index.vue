@@ -1,6 +1,11 @@
+<script setup lang="ts">
+definePageMeta({
+    title: 'My home page'
+})
+</script>
 <template>
     <div style="border: 1px solid blue;">
-        <h1>Welcome to the homepage</h1>
+        <h1>333 Welcome to the homepage</h1>
         <AppAlert>
             This is an auto-imported component
         </AppAlert>
