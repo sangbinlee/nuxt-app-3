@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        NODE_ENV = 'production'
+        BUILD_ID = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
+    }
     stages {
         stage('Clone Sources') {
           steps {
@@ -68,9 +72,9 @@ pipeline {
                 echo 'nuxt-app-3 run the application... by 백그라운드 로 실행해야함'
                 echo 'nuxt-app-3 run the application... by node .output/server/index.mjs'
                 // sh 'node .output/server/index.mjs'
-                sh 'export BUILD_ID=dontKillMe'
+                // sh 'export BUILD_ID=dontKillMe'
                 sh 'pm2 start .output/server/index.mjs -i max --name "nuxt-app-3"'
-                sh 'pm2 save'
+                // sh 'pm2 save'
             }
         }
     }
