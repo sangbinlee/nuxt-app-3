@@ -2,7 +2,8 @@ pipeline {
     agent any
     environment {
         NODE_ENV = 'production'
-        BUILD_ID = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
+        // BUILD_ID = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
+        JENKINS_NODE_COOKIE = 'dontKillMe' // Jenkins의 ProcessTreeKiller 방지
     }
     stages {
         stage('Clone Sources') {
@@ -74,7 +75,7 @@ pipeline {
                 // sh 'node .output/server/index.mjs'
                 // sh 'export BUILD_ID=dontKillMe'
                 sh 'pm2 start .output/server/index.mjs -i max --name "nuxt-app-3"'
-                // sh 'pm2 save'
+                sh 'pm2 save'
             }
         }
     }
