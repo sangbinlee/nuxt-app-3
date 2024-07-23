@@ -69,6 +69,7 @@ pipeline {
                 echo 'nuxt-app-3 run the application... by node .output/server/index.mjs'
                 // sh 'node .output/server/index.mjs'
                 sh 'pm2 start .output/server/index.mjs --name "nuxt-app-3"'
+                sh 'pm2 save'
             }
         }
     }
