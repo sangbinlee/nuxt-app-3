@@ -1,7 +1,13 @@
 <script setup lang="ts">
+import { useWebsiteStore } from '~/stores/website';
+
 definePageMeta({
-    title: 'My home page'
+    title: 'My home page',
+    // middleware: 'auth'
 })
+const website = useWebsiteStore()
+
+await callOnce(website.fetch)
 </script>
 <template>
     <div style="border: 1px solid blue;">

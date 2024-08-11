@@ -73,4 +73,6 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-"# nuxt-app-3" 
+"# nuxt-app-3"
+
+# AIzaSyCUeXPHOXaoooBNmBSAhvDStKz-H15l3dw

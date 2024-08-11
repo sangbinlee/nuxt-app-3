@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
-  modules: ["@nuxt/content"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/google-fonts",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/fonts",
+    "@pinia/nuxt",
+  ],
   vite: {
     css: {
       preprocessorOptions: {
@@ -12,5 +18,21 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ["animate.css"],
+  css: ["animate.css", "~/assets/css/main.css"],
+  // Defaults options
+  tailwindcss: {
+    cssPath: ["~/assets/css/tailwind.css", { injectPosition: "first" }],
+    configPath: "tailwind.config",
+    exposeConfig: {
+      level: 2,
+    },
+    config: {},
+    viewer: true,
+  },
+  experimental: {
+    viewTransition: true,
+  },
+  pinia: {
+    storesDirs: ["./stores/**", "./custom-folder/stores/**"],
+  },
 });
